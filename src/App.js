@@ -1,5 +1,6 @@
 import Menu from './components/Meals/Meals';
 import Card from './components/UI/Card/Card';
+import Header from './components/Layout/Header/Header';
 
 import './App.css';
 
@@ -35,6 +36,7 @@ const cart = [];
 function App() {
   return (
     <div>
+      <Header />
       <Card><Menu meals={DUMMY_MEALS} /></Card>
     </div>
   );
