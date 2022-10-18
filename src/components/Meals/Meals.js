@@ -1,19 +1,15 @@
 import React from "react";
 
-const Menu = (props) => {
-  return (
-    <React.Fragment>
-      {props.meals.map((mealItem) => {
-        return (
-          <li key={mealItem.id}>
-            <h2>{mealItem.name}</h2>
-            <p>{mealItem.description}</p>
-            <h5>$ {mealItem.price}</h5>
-          </li>
-        );
-      })}
-    </React.Fragment>
-  );
-};
+import MealsSummary from "./MealSummary";
+import AvailableMeals from "./AvailableMeals";
 
-export default Menu;
+import './Meals.css';
+
+const Meals = (props) => {
+    return <React.Fragment>
+        <MealsSummary/>
+        <AvailableMeals className="all_meals" meals={props.meals}/>
+    </React.Fragment>
+}
+
+export default Meals;

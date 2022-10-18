@@ -1,4 +1,4 @@
-import Menu from './components/Meals/Meals';
+import Meals from './components/Meals/Meals';
 import Card from './components/UI/Card/Card';
 import Header from './components/Layout/Header/Header';
 
@@ -37,7 +37,7 @@ function App() {
   return (
     <div>
       <Header />
-      <Card><Menu meals={DUMMY_MEALS} /></Card>
+      <Card className="main"><Meals meals={DUMMY_MEALS} /></Card>
     </div>
   );
 }
