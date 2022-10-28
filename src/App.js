@@ -35,8 +35,6 @@ const DUMMY_MEALS = [
   },
 ];
 
-const cart = [];
-
 function App() {
   const [cartVisible, setCartVisible] = useState(false);
 
