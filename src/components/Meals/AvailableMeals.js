@@ -7,11 +7,19 @@ import classes from "./AvailableMeals.module.css";
 const AvailableMeals = (props) => {
   return (
     <section className={classes.meals}>
-      {props.meals.map((mealItem) => {
-        return (
-          <MealItem name={mealItem.name} description={mealItem.description} price={mealItem.price} />
-        );
-      })}
+      <ul>
+        {props.meals.map((mealItem) => {
+          return (
+            <MealItem
+              id={mealItem.id}
+              name={mealItem.name}
+              description={mealItem.description}
+              price={mealItem.price}
+              key={mealItem.id}
+            />
+          );
+        })}
+      </ul>
     </section>
   );
 };
